@@ -9,11 +9,12 @@ app_id_lq = "Bs1HS1cAwFG19p0vi9KRj7D7rX3MzSbRso18aSK6QH1rILnU"
 app_key_lq = "5jJC1tLQU9k211Bz1kp7Xu5TydDEkbgPuw60C5f8tL04QdqN"
 user_name ="duanze"
 cluster = bytedtqs.Cluster.BOE
-bytedtqs.EngineType = 'SparkCli'
+bytedtqs.EngineType = 'presto'
 
 client = bytedtqs.TQSClient(app_id_boe, app_key_boe, cluster)
-sql = "select datediff('2022-08-15','2022-07-13')"
+sql = "select date2pdate('20220815')"
 analyze_result = client.analyze_query(user_name, sql)
+# conf = {'tqs.gbk.result.enabled':'true'}
 if analyze_result.is_success():
     job = client.execute_query(user_name, sql)
     if job.is_success():
@@ -26,3 +27,11 @@ if analyze_result.is_success():
         print(job.tracking_urls)
 else:
     print(analyze_result.error_message)
+
+# job = client.get_job(7197675)
+# result = job.get_result()
+# print(job)
+# print("2222222222"+result.result_url)
+# print("333333333"+result.result_url_gbk)
+
+
