@@ -18,7 +18,7 @@ if __name__ == '__main__':
         print('未输入参数，默认20条')
         n = 20
 
-    with open('/tmp/a', 'w') as data:
+    with open('a.txt', 'w') as data:
         for i in range(n):
             id = str(random.randint(1, 1000))
             col_string = ''.join(random.sample('zyxwvutsrqponmlkjihgfedcba', 4)) + \
