@@ -16,10 +16,9 @@ html = get_html(url1, url2)
 # dic = {}
 for i in html:
     try:
-        print("---------------", i, "---------------")
         while True:
             # dic[next(i).text()] = next(i).text()
             print(next(i).text(), '\t', next(i).text())
     except StopIteration:
-        print('***********************')
+        print("------------------------------")
         continue
