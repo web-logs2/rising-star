@@ -22,23 +22,34 @@ interactive = {
                 'fields': [
                     {
                         'text': {
-                            'content': '<at email=jianjunsong@bytedance.com></at>',
+                            'content': '<at email=duanze@bytedance.com></at>',
                             'tag': 'lark_md',
                         }
                     },
                     {
                         'text': {
                             'tag': 'lark_md',
-                            'content': '**松桑 我爱你！！！！！！！**\nNew function'
+                            'content': "***text*** aaa"
                         },
                         "is_short": False
                     }
                 ]
+            },
+            {
+                'tag': 'hr',  # 分割线
+            },
+            {
+                'tag': 'div',
+                'text': {
+                    "content": "Content module",
+                    'tag': 'plain_text'
+                }
             }
+
         ],
         'header': {
             'title': {
-                'content': '简俊松真是大傻逼！！！',
+                'content': 'addres！！！',
                 'tag': 'plain_text',
             },
             "template": "indigo"
